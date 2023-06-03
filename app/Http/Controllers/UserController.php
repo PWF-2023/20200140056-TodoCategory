@@ -20,7 +20,7 @@ class UserController extends Controller
                 ->paginate(20)
                 ->withQueryString();
         } else {
-            $users = User::where('id', '!=', '1')
+            $users = User::with('todos')->where('id', '!=', '1')
                 ->orderBy('name')
                 ->paginate(10);
         }
