@@ -40,6 +40,7 @@ class User extends Authenticatable implements MustVerifyEmail
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+        'id_admin' => 'boolean'
     ];
     public function todos()
     {
